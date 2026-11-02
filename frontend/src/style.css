@@ -1,0 +1,132 @@
+:root {
+  --app-bg: #f5f7fa;
+  --app-surface: #ffffff;
+  --app-border: var(--el-border-color-light);
+  --app-text-muted: var(--el-text-color-secondary);
+  --app-correct-bg: var(--el-color-success-light-9);
+  --app-correct-border: var(--el-color-success-light-5);
+  --app-mono: 'Cascadia Code', Consolas, 'JetBrains Mono', ui-monospace, monospace;
+
+  /* Biểu đồ: bảng màu tham chiếu đã kiểm định (dataviz) */
+  --viz-surface: #ffffff;
+  --viz-series-1: #2a78d6;
+  --viz-grid: #e1e0d9;
+  --viz-axis: #c3c2b7;
+  --viz-text: #0b0b0b;
+  --viz-text-secondary: #52514e;
+  --viz-text-muted: #898781;
+  --viz-empty: #ecebe6;
+  --viz-seq-1: #b7d3f6;
+  --viz-seq-2: #6da7ec;
+  --viz-seq-3: #2a78d6;
+  --viz-seq-4: #184f95;
+  --status-good: #0ca30c;
+  --status-good-text: #006300;
+  --status-warning: #fab219;
+  --status-critical: #d03b3b;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body,
+#app {
+  margin: 0;
+  height: 100%;
+}
+
+body {
+  background: var(--app-bg);
+  color: var(--el-text-color-primary);
+  font-family: system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+  -webkit-font-smoothing: antialiased;
+}
+
+.page-header {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 16px;
+}
+
+.page-header h1 {
+  margin: 0;
+  font-size: 20px;
+  font-weight: 600;
+}
+
+.page-header .spacer {
+  flex: 1;
+}
+
+.muted {
+  color: var(--app-text-muted);
+}
+
+/* ---------- Nội dung Markdown ---------- */
+.md {
+  line-height: 1.6;
+  word-wrap: break-word;
+}
+
+.md > :first-child {
+  margin-top: 0;
+}
+
+.md > :last-child {
+  margin-bottom: 0;
+}
+
+.md p {
+  margin: 0 0 0.6em;
+}
+
+/* Tắt ligature để "=>", ">=", "!=" hiển thị đúng từng ký tự như trong đề thi */
+.md code,
+textarea {
+  font-variant-ligatures: none;
+  font-feature-settings: 'calt' 0, 'liga' 0;
+}
+
+.md code {
+  font-family: var(--app-mono);
+  font-size: 0.9em;
+  padding: 0.1em 0.35em;
+  border-radius: 4px;
+  background: var(--el-fill-color);
+}
+
+.md pre.hljs {
+  margin: 0.6em 0;
+  padding: 12px 14px;
+  border-radius: 8px;
+  overflow-x: auto;
+  font-size: 13.5px;
+  line-height: 1.5;
+}
+
+.md pre.hljs code {
+  padding: 0;
+  background: none;
+  font-size: inherit;
+}
+
+.md ul,
+.md ol {
+  padding-left: 1.4em;
+  margin: 0 0 0.6em;
+}
+
+.md table {
+  border-collapse: collapse;
+  margin: 0.6em 0;
+}
+
+.md th,
+.md td {
+  border: 1px solid var(--app-border);
+  padding: 4px 8px;
+}
