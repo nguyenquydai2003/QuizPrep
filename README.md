@@ -2,6 +2,8 @@
 
 Web app luyện thi trắc nghiệm tuyển dụng: **ASP.NET Core (.NET 9) + EF Core + SQL Server** và **Vue 3 + Vite + TypeScript + Element Plus**.
 
+📖 **[Hướng dẫn sử dụng chi tiết](docs/HUONG_DAN_SU_DUNG.md)**: cài đặt, làm bài, quản trị, định dạng file import, cấu hình, sao lưu, xử lý sự cố.
+
 ## Tính năng
 
 **Học viên**
